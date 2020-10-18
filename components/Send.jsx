@@ -7,7 +7,7 @@ function Send() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (message.length === null) {
+    if (message.length === 0 && message === "") {
       console.log("Input something");
       return;
     }
@@ -37,7 +37,7 @@ function Send() {
           className="input2"
           type="text"
           placeholder="Write message here"
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => setMessage(e.target.value.trim())}
         />
         <input className="sub2" type="submit" value="Send" />
       </form>
