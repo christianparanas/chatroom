@@ -1,5 +1,5 @@
 import { useState } from "react";
-import firedb from "../firebase";
+import firebase from "../firebase";
 
 function Send() {
   const [message, setMessage] = useState("");
@@ -23,7 +23,7 @@ function Send() {
       date: datex.toDateString(),
     };
 
-    firedb.child("messages").push(data, (err) => {
+    firebase.child("messages").push(data, (err) => {
       if (err) {
         console.log(err);
       }

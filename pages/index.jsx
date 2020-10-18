@@ -1,21 +1,28 @@
-import Head from 'next/head'
+import Head from "next/head";
+import { useRouter } from 'next/router'
 
-import { useState } from 'react'
-
-import Send from '../components/Send' 
+import { useState } from "react";
 
 export default function Home() {
   const [username, setUsername] = useState("");
-
+  const router = useRouter()
 
   const saveUsername = (e) => {
     e.preventDefault();
 
-    if(username.length === 0) return;
-    localStorage.setItem('username', username)
+    // checks if user input username
+    if (username.length === 0) {
+      alert('Please enter your name')
+      return;
+    }
 
-    console.log(localStorage.getItem('username'))
-  }
+    // putting username value to localstorage to use it in database storing, not using any state mgm
+    localStorage.setItem("username", username);
+    
+    // redirect to room onclick join btn
+    router.push('/room')
+
+  };
 
   return (
     <div className="main-container">
@@ -23,12 +30,18 @@ export default function Home() {
         <title>Chatroom</title>
       </Head>
 
-      <form onSubmit={saveUsername}>
-        <label>Churuchatroom</label>
-        <input type="text" placeholder="Enter your name" onChange={(e) => setUsername(e.target.value)} />
-        <input type="submit" value="Join" />
-      </form>
-      <Send />
+      <div className="creden">
+        <form onSubmit={saveUsername}>
+          <label>ChuruchatRoom</label>
+          <input
+            className="input1"
+            type="text"
+            placeholder="Enter your name"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input className="sub" type="submit" value="Join Room" />
+        </form>
+      </div>
     </div>
-  )
+  );
 }

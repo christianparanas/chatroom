@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.creden {
+  height: 100vh;
+  color: white;
+  background-color: #2F263C;
+  display: grid;
+  place-items: center;
+
+  form {
+    width: 70%;
+    text-align: center;
+
+    label {
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .input1 {
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px 20px;
+      color: white;
+      background-color: #281E36;
+      outline-color: #FF6B81;
+      outline-width: 1ch;
+      border: 0;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+  
+    input::placeholder {
+      color: white;
+    }
+
+    .sub {
+      background-color: #FF6B81;
+      outline: none;
+    }
+  }
+
+}
