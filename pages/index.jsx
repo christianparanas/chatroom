@@ -11,7 +11,7 @@ export default function Home() {
     e.preventDefault();
 
     // checks if user input username
-    if (username.length === 0) {
+    if (username.length === 0 && username === "") {
       alert("Please enter your name");
       return;
     }
@@ -36,7 +36,7 @@ export default function Home() {
             className="input1"
             type="text"
             placeholder="Enter your name"
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value.trim())}
           />
           <input className="sub" type="submit" value="Join Room" />
           <p>built by christianparanas</p>
