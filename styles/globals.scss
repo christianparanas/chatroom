@@ -7,10 +7,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-color: #2F263C;
+}
+
 .creden {
   height: 100vh;
   color: white;
-  background-color: #2F263C;
   display: grid;
   place-items: center;
 
@@ -46,6 +49,68 @@
     .sub {
       background-color: #FF6B81;
       outline: none;
+    }
+  }
+}
+
+.room {
+  padding: 20px;
+  height: fit-content;
+  color: white;
+
+  .messages {
+    height: 500px;
+    border: 2px solid #FF6B81;
+    padding: 20px;
+    font-size: 12px;
+    overflow-y: scroll;
+
+    .each {
+
+      .cre {
+
+        .msg {
+          width: fit-content;
+          padding: 5px 10px;
+          border-radius: 12px;
+          background-color: #FF6B81;
+        }
+
+        .date {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+
+  .send {
+
+    form {
+
+      .input2 {
+        margin-top: 10px;
+      }
+
+      input {
+        width: 100%;
+        padding: 15px 20px;
+        color: white;
+        background-color: #281E36;
+        outline-color: #FF6B81;
+        outline-width: 1ch;
+        border: 0;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+    
+      input::placeholder {
+        color: white;
+      }
+
+      .sub2 {
+        background-color: #FF6B81;
+        outline: none;
+      }
     }
   }
 

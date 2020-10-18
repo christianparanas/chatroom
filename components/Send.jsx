@@ -34,11 +34,12 @@ function Send() {
     <div className="send">
       <form onSubmit={handleSubmit}>
         <input
+          className="input2"
           type="text"
           placeholder="Write message here"
           onChange={(e) => setMessage(e.target.value)}
         />
-        <input type="submit" value="Send" />
+        <input className="sub2" type="submit" value="Send" />
       </form>
     </div>
   );
