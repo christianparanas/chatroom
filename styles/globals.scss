@@ -95,6 +95,7 @@ body {
     padding: 10px;
     font-size: 12px;
     overflow-y: scroll;
+    position: relative;
 
     .each {
       display: grid;
@@ -121,6 +122,41 @@ body {
         }
       }
     }
+
+    .ownMsg {
+      position: relative;
+      right: 0;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      place-items: end;
+      text-align: start;
+      
+      img {
+        display: none;
+      }
+
+      .cre {
+        grid-column-start: 2;
+        display: grid;
+        place-items: start end;
+
+        .name {
+          display: none;
+        }
+
+        .msg {
+          justify-self: end;
+          word-break: break-all;
+        }
+
+        .date {
+          text-align: end;
+        }
+
+        
+      }
+    }
+    
   }
 
   .send {

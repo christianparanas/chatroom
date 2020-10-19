@@ -40,6 +40,7 @@ function Send({ triggerScroll }) {
         <input
           id="send"
           className="input2"
+          autocomplete="off"
           type="text"
           placeholder="Write message here"
           onChange={(e) => setMessage(e.target.value.trim())}
