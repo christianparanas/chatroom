@@ -90,7 +90,7 @@ body {
   }
 
   .messages {
-    height: 500px;
+    height: 400px;
     border: 2px solid #FF6B81;
     padding: 10px;
     font-size: 12px;
@@ -99,7 +99,7 @@ body {
 
     .each {
       display: grid;
-      grid-template-columns: 50px 1fr;
+      grid-template-columns: 50px 70%;
       margin-bottom: 15px;
 
       img {
@@ -109,6 +109,7 @@ body {
       }
 
       .cre {
+        word-wrap: break-all;
 
         .msg {
           width: fit-content;
@@ -156,7 +157,6 @@ body {
         
       }
     }
-    
   }
 
   .send {

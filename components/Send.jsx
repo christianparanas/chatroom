@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import firebase from "../firebase";
 
 function Send({ triggerScroll }) {
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    triggerScroll()
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +33,6 @@ function Send({ triggerScroll }) {
       }
     });
 
-    // triggerScroll()
     // clear input
     document.getElementById('send').value = ""
   }
@@ -40,7 +43,7 @@ function Send({ triggerScroll }) {
         <input
           id="send"
           className="input2"
-          autocomplete="off"
+          autoComplete="off"
           type="text"
           placeholder="Write message here"
           onChange={(e) => setMessage(e.target.value.trim())}

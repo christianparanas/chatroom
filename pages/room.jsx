@@ -34,9 +34,9 @@ function Room() {
     }
   }
 
-  // const scrollToBottom = () => {
-  //   messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
-  // }
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+  }
 
   useEffect(() => {
     checkUsername();
@@ -53,8 +53,8 @@ function Room() {
         })}
         <div ref={messagesEndRef} />
       </div>
-      <Send />
-      {/* <Send triggerScroll={scrollToBottom()} /> */}
+      {/* <Send /> */}
+      <Send triggerScroll={scrollToBottom} />
     </div>
   );
 }
