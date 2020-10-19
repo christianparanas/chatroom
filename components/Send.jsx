@@ -5,8 +5,9 @@ function Send({ triggerScroll }) {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    triggerScroll()
-  })
+    triggerScroll();
+    getTime(new Date)
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,12 +20,24 @@ function Send({ triggerScroll }) {
     sendToFire();
   };
 
+  function getTime(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? "pm" : "am";
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    var strTime = hours + ":" + minutes + " " + ampm;
+    return strTime;
+  }
+
   function sendToFire() {
     const datex = new Date(Date.now());
     let data = {
       username: localStorage.getItem("username"),
       message: message,
       date: datex.toDateString(),
+      time: getTime(new Date),
     };
 
     firebase.child("messages").push(data, (err) => {
@@ -34,7 +47,7 @@ function Send({ triggerScroll }) {
     });
 
     // clear input
-    document.getElementById('send').value = ""
+    document.getElementById("send").value = "";
   }
 
   return (

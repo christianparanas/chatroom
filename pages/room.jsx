@@ -21,6 +21,7 @@ function Room() {
           username: snapshot.val()[chat].username,
           message: snapshot.val()[chat].message,
           date: snapshot.val()[chat].date,
+          time: snapshot.val()[chat].time,
         };
         list.push(obj);
       }
