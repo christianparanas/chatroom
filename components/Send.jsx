@@ -1,7 +1,7 @@
 import { useState } from "react";
 import firebase from "../firebase";
 
-function Send() {
+function Send({ triggerScroll }) {
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
@@ -28,12 +28,17 @@ function Send() {
         console.log(err);
       }
     });
+
+    // triggerScroll()
+    // clear input
+    document.getElementById('send').value = ""
   }
 
   return (
     <div className="send">
       <form onSubmit={handleSubmit}>
         <input
+          id="send"
           className="input2"
           type="text"
           placeholder="Write message here"

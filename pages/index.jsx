@@ -1,11 +1,21 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [username, setUsername] = useState("");
   const router = useRouter();
+
+  const checkifAlreadyUser = () => {
+    if(localStorage.getItem('username') !== null) {
+      router.push("/room");
+    }
+  }
+
+  useEffect(() => {
+    checkifAlreadyUser();
+  }, [])
 
   const saveUsername = (e) => {
     e.preventDefault();

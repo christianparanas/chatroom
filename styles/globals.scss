@@ -62,6 +62,33 @@ body {
   height: fit-content;
   color: white;
 
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    .logo {
+      padding: 10px 0;
+    }
+
+    .user {
+      display: grid;
+      grid-template-columns: 1fr 50px;
+
+      .name {
+        margin-right: 15px;
+        padding: 10px;
+      }
+
+      img {
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid #FF6B81;
+      }
+    }
+  }
+
   .messages {
     height: 500px;
     border: 2px solid #FF6B81;
