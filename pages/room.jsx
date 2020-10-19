@@ -4,12 +4,12 @@ import firebase from "../firebase";
 
 import Send from "../components/Send";
 import Eachmsg from "../components/Eachmsg";
-import Nav from '../components/Nav'
+import Nav from "../components/Nav";
 
 function Room() {
   const [messages, setMessages] = useState([]);
   const router = useRouter();
-  const messagesEndRef = useRef(null)
+  const messagesEndRef = useRef(null);
 
   const getMessages = () => {
     firebase.child("messages").on("value", (snapshot) => {
@@ -30,27 +30,34 @@ function Room() {
   };
 
   const checkUsername = () => {
-    if(localStorage.getItem('username') === null) {
+    if (localStorage.getItem("username") === null) {
       router.push("/");
     }
-  }
+  };
 
   const scrollToBottom = () => {
-    messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
-  }
-
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+ 
   useEffect(() => {
     checkUsername();
     getMessages();
+    getDate()
   }, []);
-
+  
+  function getDate() {
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes();
+    console.log(time)
+    return time;
+  }
 
   return (
     <div className="room">
       <Nav />
       <div className="messages" id="messages">
         {messages.map((msg) => {
-          return <Eachmsg msg={msg} />;
+          return <Eachmsg msg={msg} />
         })}
         <div ref={messagesEndRef} />
       </div>
