@@ -56,6 +56,7 @@ function Room() {
     <div className="room">
       <Nav />
       <div className="messages" id="messages">
+        <div className="sepdate">Oct 19, 2020</div>
         {messages.map((msg) => {
           return <Eachmsg msg={msg} />
         })}
