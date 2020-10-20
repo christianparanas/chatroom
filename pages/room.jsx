@@ -43,6 +43,7 @@ function Room() {
     checkUsername();
     getMessages();
     getDate()
+    scrollToBottom()
   }, []);
   
   function getDate() {
