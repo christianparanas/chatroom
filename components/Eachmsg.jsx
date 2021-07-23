@@ -19,7 +19,11 @@ function Eachmsg({ msg }) {
       <div className="cre">
         <div className="name">{msg.username}</div>
         <div className="msg">{msg.message}</div>
-        <div className="date">{msg.time}</div>
+
+      </div>
+      <div className="msgD">
+        <div className="date">{msg.date}</div>
+        <div className="time">{msg.time}</div>
       </div>
     </div>
   );

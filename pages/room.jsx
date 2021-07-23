@@ -49,7 +49,6 @@ function Room() {
   function getDate() {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes();
-    console.log(time)
     return time;
   }
 
@@ -57,9 +56,13 @@ function Room() {
     <div className="room">
       <Nav />
       <div className="messages" id="messages">
-        <div className="sepdate">Oct 19, 2020</div>
-        {messages.map((msg) => {
-          return <Eachmsg msg={msg} />
+        <div className="sepdate">Created on Oct 19, 2020.</div>
+        {messages.map((msg, key) => {
+          return (
+            <div key={key}>
+              <Eachmsg msg={msg} />
+            </div>
+          )
         })}
         <div ref={messagesEndRef} />
       </div>
