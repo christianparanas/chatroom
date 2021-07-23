@@ -232,9 +232,17 @@ body {
       }
 
       .sub2 {
-        background-color: #FF6B81;
+        background-color: #6b21a8;
+        transition: all .3s ease;
         outline: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #FF6B81;
+        }
       }
+
+
     }
   }
 
