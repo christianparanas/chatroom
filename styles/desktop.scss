@@ -211,6 +211,10 @@
           .sub2 {
             background-color: #6b21a8;
             outline: none;
+
+            &:hover {
+              background-color: #FF6B81;
+            }
           }
         }
       }
