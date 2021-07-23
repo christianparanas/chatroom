@@ -48,6 +48,8 @@ function Send({ triggerScroll }) {
 
     // clear input
     document.getElementById("send").value = "";
+    // clear msg varible
+    setMessage("")
   }
 
   return (

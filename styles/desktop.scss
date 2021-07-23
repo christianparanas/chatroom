@@ -9,40 +9,6 @@
       form {
         width: 400px;
         text-align: center;
-    
-        label {
-          font-size: 28px;
-          font-weight: 800;
-        }
-    
-        .input1 {
-          margin-top: 10px;
-        }
-    
-        input {
-          width: 100%;
-          padding: 15px 20px;
-          color: white;
-          background-color: #281E36;
-          outline-color: #FF6B81;
-          outline-width: 1ch;
-          border: 0;
-          margin-bottom: 15px;
-          border-radius: 5px;
-        }
-      
-        input::placeholder {
-          color: white;
-        }
-    
-        .sub {
-          background-color: #FF6B81;
-          outline: none;
-        }
-    
-        p {
-          font-size: 10px;
-        }
       }
     }
     
@@ -251,3 +217,4 @@
     
     }
 }
+

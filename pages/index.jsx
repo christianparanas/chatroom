@@ -49,7 +49,7 @@ export default function Home() {
             onChange={(e) => setUsername(e.target.value.trim())}
           />
           <input className="sub" type="submit" value="Join Room" />
-          <p>built by christianparanas</p>
+          <p>made by christianparanas</p>
         </form>
       </div>
     </div>
