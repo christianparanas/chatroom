@@ -38,14 +38,14 @@ function Room() {
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
- 
+
   useEffect(() => {
     checkUsername();
     getMessages();
-    getDate()
-    scrollToBottom()
+    getDate();
+    scrollToBottom();
   }, []);
-  
+
   function getDate() {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes();
@@ -62,7 +62,7 @@ function Room() {
             <div key={key}>
               <Eachmsg msg={msg} />
             </div>
-          )
+          );
         })}
         <div ref={messagesEndRef} />
       </div>

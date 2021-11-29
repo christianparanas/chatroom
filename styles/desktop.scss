@@ -1,224 +1,218 @@
-
 @media (min-width: 550px) {
-   .creden {
-      height: 100vh;
-      color: white;
-      display: grid;
-      place-items: center;
-    
-      form {
-        width: 400px;
-        text-align: center;
-      }
+  .creden {
+    height: 100vh;
+    color: white;
+    display: grid;
+    place-items: center;
+
+    form {
+      width: 400px;
+      text-align: center;
     }
-    
-    .room {
-      display: block;
-      margin: 0 auto;
-      padding: 30px 20px 20px;
-      height: fit-content;
-      width: 550px;
-      color: white;
+  }
 
-      ::-webkit-scrollbar {
-         width: 10px;
-       }
-       
-       /* Track */
-       ::-webkit-scrollbar-track {
-         background: #281E36;
-       }
-       
-       /* Handle */
-       ::-webkit-scrollbar-thumb {
-         background: #FF6B81;
-       }
-       
-       /* Handle on hover */
-       ::-webkit-scrollbar-thumb:hover {
-         background: #FF6B81;
-       } 
-    
-      .sepdate {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-    
-        .logo {
-          padding: 10px 0;
-        }
-    
-        .user {
-          display: grid;
-          grid-template-columns: 1fr 50px;
-    
-          .name {
-            margin-right: 15px;
-            padding: 10px;
-          }
-    
-          img {
-            width: 40px;
-            border-radius: 50%;
-            border: 2px solid #FF6B81;
-          }
-        }
-      }
-    
-      .messages {
-        height: 450px;
-        border: 2px solid #281E36;
-        padding: 10px;
-        font-size: 12px;
-        overflow-y: scroll;
-        position: relative;
-    
-    .each {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 12px;
-      margin-top: 25px;
+  .room {
+    display: block;
+    margin: 0 auto;
+    padding: 30px 20px 20px;
+    height: fit-content;
+    width: 550px;
+    color: white;
 
-      img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid #FF6B81;
-      }
-
-      .cre {
-        word-wrap: break-all;
-        position: relative;
-
-        .name {
-          position: absolute;
-          margin-left: 6px;
-          margin-bottom: 5px;
-        }
-
-        .msg {
-          position: relative;
-          top: 18px;
-          margin-left: 5px; 
-          width: fit-content;
-          max-width: 100%;
-          padding: 5px 10px;
-          border-radius: 12px;
-          background-color: #FF6B81;
-          word-break: break-all;
-        }
-
-        .time {
-          font-size: 8px;
-          margin-left: 7px;
-        }
-      }
-
-      .msgD {
-        color: #a9a3a3;
-        position: relative;
-        font-size: 9px;
-        width: fit-content;
-        min-width: 70px;
-        margin-left: 5px;
-        position: relative;
-        top: 20px;
-
-        .time {
-          color: white;
-        }
-      }
+    ::-webkit-scrollbar {
+      width: 10px;
     }
 
-    .ownMsg {
-      position: relative;
-      right: 0;
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 0;
-      margin-bottom: 5px;
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #281e36;
+    }
 
-      
-      img {
-        display: none;
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #ff6b81;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff6b81;
+    }
+
+    .sepdate {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      .logo {
+        padding: 10px 0;
       }
 
-      .cre {
-        grid-column-start: 2;
+      .user {
         display: grid;
-        place-items: start end;
+        grid-template-columns: 1fr 50px;
 
         .name {
+          margin-right: 15px;
+          padding: 10px;
+        }
+
+        img {
+          width: 40px;
+          border-radius: 50%;
+          border: 2px solid #ff6b81;
+        }
+      }
+    }
+
+    .messages {
+      height: 450px;
+      border: 2px solid #281e36;
+      padding: 10px;
+      font-size: 12px;
+      overflow-y: scroll;
+      position: relative;
+
+      .each {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+        margin-top: 25px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid #ff6b81;
+        }
+
+        .cre {
+          word-wrap: break-all;
+          position: relative;
+
+          .name {
+            position: absolute;
+            margin-left: 6px;
+            margin-bottom: 5px;
+          }
+
+          .msg {
+            position: relative;
+            top: 18px;
+            margin-left: 5px;
+            width: fit-content;
+            max-width: 100%;
+            padding: 5px 10px;
+            border-radius: 12px;
+            background-color: #ff6b81;
+            word-break: break-all;
+          }
+
+          .time {
+            font-size: 8px;
+            margin-left: 7px;
+          }
+        }
+
+        .msgD {
+          color: #a9a3a3;
+          position: relative;
+          font-size: 9px;
+          width: fit-content;
+          min-width: 70px;
+          margin-left: 5px;
+          position: relative;
+          top: 20px;
+
+          .time {
+            color: white;
+          }
+        }
+      }
+
+      .ownMsg {
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0;
+        margin-bottom: 5px;
+
+        img {
           display: none;
         }
 
-        .msg {
+        .cre {
+          grid-column-start: 2;
+          display: grid;
+          place-items: start end;
+
+          .name {
+            display: none;
+          }
+
+          .msg {
+            width: fit-content;
+
+            word-break: break-all;
+            background-color: cadetblue;
+          }
+
+          .time {
+            margin-right: 7px;
+            margin-left: 0;
+          }
+        }
+
+        .msgD {
+          order: -1;
           width: fit-content;
-
-          word-break: break-all;
-          background-color: cadetblue;
-        }
-
-        .time {
-          margin-right: 7px;
+          min-width: 65px;
+          position: relative;
+          top: 20px;
+          font-size: 8px;
           margin-left: 0;
+          text-align: end;
         }
       }
-
-      .msgD {
-        order: -1;
-        width: fit-content;
-        min-width: 65px;
-        position: relative;
-        top: 20px;
-        font-size: 8px;
-        margin-left: 0;
-        text-align: end;
-      }
     }
-      }
-    
-      .send {
-    
-        form {
-    
-          .input2 {
-            margin-top: 10px;
-          }
-    
-          input {
-            width: 100%;
-            padding: 15px 20px;
-            color: white;
-            background-color: #281E36;
-            outline-color: #FF6B81;
-            outline-width: 1ch;
-            border: 0;
-            margin-bottom: 10px;
-            border-radius: 5px;
-          }
-        
-          input::placeholder {
-            color: white;
-          }
-    
-          .sub2 {
-            background-color: #6b21a8;
-            outline: none;
 
-            &:hover {
-              background-color: #FF6B81;
-            }
+    .send {
+      form {
+        .input2 {
+          margin-top: 10px;
+        }
+
+        input {
+          width: 100%;
+          padding: 15px 20px;
+          color: white;
+          background-color: #281e36;
+          outline-color: #ff6b81;
+          outline-width: 1ch;
+          border: 0;
+          margin-bottom: 10px;
+          border-radius: 5px;
+        }
+
+        input::placeholder {
+          color: white;
+        }
+
+        .sub2 {
+          background-color: #6b21a8;
+          outline: none;
+
+          &:hover {
+            background-color: #ff6b81;
           }
         }
       }
-    
     }
+  }
 }
-

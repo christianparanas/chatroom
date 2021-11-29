@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 function Nav() {
-   const [name, setName] = useState()
+  const [name, setName] = useState();
 
-   useEffect(() => {
-      if (typeof window !== 'undefined') {
-         setName(localStorage.getItem('username'))
-     }
-   }, [])
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setName(localStorage.getItem("username"));
+    }
+  }, []);
 
   return (
     <div className="nav">

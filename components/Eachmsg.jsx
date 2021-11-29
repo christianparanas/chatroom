@@ -19,7 +19,6 @@ function Eachmsg({ msg }) {
       <div className="cre">
         <div className="name">{msg.username}</div>
         <div className="msg">{msg.message}</div>
-
       </div>
       <div className="msgD">
         <div className="date">{msg.date}</div>

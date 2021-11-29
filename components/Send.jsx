@@ -6,7 +6,7 @@ function Send({ triggerScroll }) {
 
   useEffect(() => {
     triggerScroll();
-    getTime(new Date)
+    getTime(new Date());
   });
 
   const handleSubmit = (e) => {
@@ -37,7 +37,7 @@ function Send({ triggerScroll }) {
       username: localStorage.getItem("username"),
       message: message,
       date: datex.toDateString(),
-      time: getTime(new Date),
+      time: getTime(new Date()),
     };
 
     firebase.child("messages").push(data, (err) => {
@@ -49,7 +49,7 @@ function Send({ triggerScroll }) {
     // clear input
     document.getElementById("send").value = "";
     // clear msg varible
-    setMessage("")
+    setMessage("");
   }
 
   return (

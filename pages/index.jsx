@@ -8,14 +8,14 @@ export default function Home() {
   const router = useRouter();
 
   const checkifAlreadyUser = () => {
-    if(localStorage.getItem('username') !== null) {
+    if (localStorage.getItem("username") !== null) {
       router.push("/room");
     }
-  }
+  };
 
   useEffect(() => {
     checkifAlreadyUser();
-  }, [])
+  }, []);
 
   const saveUsername = (e) => {
     e.preventDefault();

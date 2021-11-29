@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  background-color: #2F263C;
+  background-color: #2f263c;
 }
 
 .creden {
@@ -34,20 +34,20 @@ body {
       width: 100%;
       padding: 15px 20px;
       color: white;
-      background-color: #281E36;
-      outline-color: #FF6B81;
+      background-color: #281e36;
+      outline-color: #ff6b81;
       outline-width: 1ch;
       border: 0;
       margin-bottom: 15px;
       border-radius: 5px;
     }
-  
+
     input::placeholder {
       color: white;
     }
 
     .sub {
-      background-color: #FF6B81;
+      background-color: #ff6b81;
       outline: none;
     }
 
@@ -89,14 +89,14 @@ body {
       img {
         width: 40px;
         border-radius: 50%;
-        border: 2px solid #FF6B81;
+        border: 2px solid #ff6b81;
       }
     }
   }
 
   .messages {
     height: 450px;
-    border: 2px solid #281E36;
+    border: 2px solid #281e36;
     padding: 10px;
     font-size: 12px;
     overflow-y: scroll;
@@ -112,7 +112,7 @@ body {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid #FF6B81;
+        border: 2px solid #ff6b81;
       }
 
       .cre {
@@ -128,12 +128,12 @@ body {
         .msg {
           position: relative;
           top: 18px;
-          margin-left: 5px; 
+          margin-left: 5px;
           width: fit-content;
           max-width: 100%;
           padding: 5px 10px;
           border-radius: 12px;
-          background-color: #FF6B81;
+          background-color: #ff6b81;
           word-break: break-all;
         }
 
@@ -167,7 +167,6 @@ body {
       margin-top: 0;
       margin-bottom: 5px;
 
-      
       img {
         display: none;
       }
@@ -208,9 +207,7 @@ body {
   }
 
   .send {
-
     form {
-
       .input2 {
         margin-top: 10px;
       }
@@ -219,31 +216,26 @@ body {
         width: 100%;
         padding: 15px 20px;
         color: white;
-        background-color: #281E36;
-        outline-color: #FF6B81;
+        background-color: #281e36;
+        outline-color: #ff6b81;
         outline-width: 1ch;
         border: 0;
         margin-bottom: 10px;
         border-radius: 5px;
       }
-    
+
       input::placeholder {
         color: white;
       }
 
       .sub2 {
         background-color: #6b21a8;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         outline: none;
         cursor: pointer;
       }
-
-
     }
   }
-
 }
 
-@import './desktop.scss'
-
-
+@import "./desktop.scss";
