@@ -2,9 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import firebase from "../firebase";
 
-import Send from "../components/Send";
-import Eachmsg from "../components/Eachmsg";
-import Nav from "../components/Nav";
+import { Send, EachMsg, Nav } from "../components";
 
 function Room() {
   const [messages, setMessages] = useState([]);
@@ -60,7 +58,7 @@ function Room() {
         {messages.map((msg, key) => {
           return (
             <div key={key}>
-              <Eachmsg msg={msg} />
+              <EachMsg msg={msg} />
             </div>
           );
         })}

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState(null);
   const router = useRouter();
 
   const checkifAlreadyUser = () => {
@@ -33,6 +33,7 @@ export default function Home() {
     router.push("/room");
   };
 
+
   return (
     <div className="main-container">
       <Head>
@@ -49,7 +50,7 @@ export default function Home() {
             onChange={(e) => setUsername(e.target.value.trim())}
           />
           <input className="sub" type="submit" value="Join Room" />
-          <p>made by christianparanas</p>
+          <p>built by christianparanas</p>
         </form>
       </div>
     </div>

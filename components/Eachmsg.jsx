@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-function Eachmsg({ msg }) {
+function EachMsg({ msg }) {
   const [categ, setCateg] = useState();
 
   useEffect(() => {
     if (msg.username === localStorage.getItem("username")) {
       setCateg("each ownMsg");
     } else {
-      setCateg("each");
+      setCateg("each otherMsg");
     }
   }, []);
 
@@ -28,4 +28,4 @@ function Eachmsg({ msg }) {
   );
 }
 
-export default Eachmsg;
+export default EachMsg;
